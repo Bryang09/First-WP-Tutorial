@@ -13,6 +13,9 @@ function wpb_theme_setup()
   register_nav_menus(array(
     'primary' => __('Primary Menu')
   ));
+
+  // Post Format
+  add_theme_support('post-formats', array('aside', 'gallery'));
 }
 
 
@@ -26,4 +29,25 @@ function set_excerpt_length()
 }
 
 add_filter('excerpt_length', 'set_excerpt_length');
+
+
+
+
+// Widget Locations
+
+function wpb_init_widgets($id)
+{
+  register_sidebar(array(
+    'name' => 'Sidebar',
+    'id' => "sidebar",
+    'before_widget' => '<div class="sidebar-module">',
+    'after-widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+}
+
+add_action('widgets_init', 'wpb_init_widgets')
+
 ?>
+

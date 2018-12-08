@@ -10,7 +10,7 @@
             <?php get_template_part('content') ?>
           <?php endwhile; ?>
           <?php else : ?>
-            <p><?php __('No Post Found') ?></p>
+            <p><?php __('No Page Found') ?></p>
           <?php endif ?>
           <!-- /.blog-post -->
 
