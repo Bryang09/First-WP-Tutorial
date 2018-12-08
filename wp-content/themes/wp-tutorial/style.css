@@ -232,3 +232,9 @@ li {
 .blog-nav a:hover {
   color: #000;
 }
+
+.post-thumb img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3vh;
+}
